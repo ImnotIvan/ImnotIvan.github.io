@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>面向对象_继承多态 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象_继承多态">
+<meta property="og:url" content="https://imnotivan.github.io/2018/07/24/面向对象-继承多态/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-07-24T19:13:57.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象_继承多态">
+<meta name="twitter:description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://imnotivan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象-继承多态" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/24/面向对象-继承多态/" class="article-date">
+  <time datetime="2018-07-24T17:36:59.000Z" itemprop="datePublished">2018-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象_继承多态
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python中可以使用class来创建一个类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P</span>:</span> <span class="comment"># 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):  </span></span><br><span class="line">    </span><br><span class="line">    place = <span class="string">'earth'</span> <span class="comment"># 类变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls)</span>:</span> <span class="comment"># __new__是一个内置的类函数,作用就是创建一个新的实例，创建是会自动调用，不需要使用@classmethod </span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, title)</span>:</span> <span class="comment"># __init__函数用于初始化P类的实例属性</span></span><br><span class="line">        self.title = title <span class="comment"># 实例变量只能由实例函数访问</span></span><br><span class="line">    <span class="comment"># self指针指向创建出来的实例，实例函数中第一个参数总是作为指针，通常写成self</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod # 类函数需要使用内置的类函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_1</span><span class="params">(cls)</span>:</span> <span class="comment"># 类的函数的第一个参数默认是指向类的指针，通常写成cls</span></span><br><span class="line">        print(cls.place) <span class="comment"># 类函数可以访问类的属性</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @staticmethod # 静态函数需要使用静态函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_2</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'Hello!'</span>) <span class="comment"># 静态函数不能访问类属性</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>以上的 P类 包含有三类函数:</p>
+<ul>
+<li><p>实例函数</p>
+<ul>
+<li><strong>只有实例函数能够访问实例变量</strong></li>
+<li>必须以self指针作为第一个参数</li>
+<li>只有实例能够调用实例函数</li>
+</ul>
+</li>
+<li><p>类函数</p>
+<ul>
+<li>必须使用@classmethod装饰器</li>
+<li>并且以cls指针作为第一个参数</li>
+<li>可以被实例和类调用</li>
+<li>类函数可以访问类变量</li>
+</ul>
+</li>
+<li><p>静态函数</p>
+<p>必须使用@staticmethod装饰器</p>
+<p>可以被实例和类调用</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul>
+<li><h4 id="单继承"><a href="#单继承" class="headerlink" title="单继承"></a>单继承</h4></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># C 是 P 的子类，承接上文代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(P)</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, title)</span>:</span> <span class="comment"># 继承的函数无法修改只能重写</span></span><br><span class="line">        super(C, self).__init__(title) <span class="comment"># super()函数可以在父类完整的实例函数基础上添加实例变量</span></span><br><span class="line">        self.name = name <span class="comment"># 添加的实例变量</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h4></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P1</span>:</span></span><br><span class="line">    place = <span class="string">'Earth'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P2</span>:</span></span><br><span class="line">    place = <span class="string">'Mars'</span></span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(P1, P2)</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">Human = C()</span><br><span class="line">print(Human.place)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果:</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Mars</span></span><br><span class="line"><span class="string">[Finished in 0.1s]</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment"># python中的子类可以继承多个父类，</span></span><br><span class="line"><span class="comment"># 当多个父类有同名变量或者同名函数时，自动选择比较排序靠前的，即在本例中会选择P1</span></span><br></pre></td></tr></table></figure>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This is P."</span>)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C1</span><span class="params">(P)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This is C1."</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C2</span><span class="params">(P)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'This is C2.'</span>)</span><br><span class="line">        </span><br><span class="line">a = C1()</span><br><span class="line">b = C2()</span><br><span class="line">a.func()</span><br><span class="line">b.func()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行结果:</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">This is C1.</span></span><br><span class="line"><span class="string">This is C2.</span></span><br><span class="line"><span class="string">[Finished in 0.1s]</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment"># 多态其实就是多个类有相同函数名的函数，调用该函数时不同的类给出不同的结果。</span></span><br></pre></td></tr></table></figure>
+<p>  Author: Ivan Sun<br>  Copyright: 非商业自由转载（好像有人会转一样。。）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://imnotivan.github.io/2018/07/24/面向对象-继承多态/" data-id="cjk02wzt40003ikmqrsv09dfc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/闭包函数-装饰器/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">闭包函数、装饰器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/24/面向对象-继承多态/">面向对象_继承多态</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/闭包函数-装饰器/">闭包函数、装饰器</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/数据类型/">基础数据类型</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/Python/">Python</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/holle-world/">Introduce</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Ivan Sun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
