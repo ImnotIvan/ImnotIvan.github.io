@@ -5,19 +5,19 @@
   
 
   
-  <title>面向对象_继承多态 | Blog</title>
+  <title>面向对象/继承多态 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象_继承多态">
+<meta property="og:title" content="面向对象&#x2F;继承多态">
 <meta property="og:url" content="https://imnotivan.github.io/2018/07/24/面向对象-继承多态/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-24T19:13:57.293Z">
+<meta property="og:updated_time" content="2018-07-24T19:15:50.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象_继承多态">
+<meta name="twitter:title" content="面向对象&#x2F;继承多态">
 <meta name="twitter:description" content="面向对象类123456789101112131415161718# Python中可以使用class来创建一个类class P: # 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):          place = &apos;earth&apos; # 类变量        def __new__(cls): # __new__是一个内置的类函数,作用就是创建一个新的实例，">
   
     <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      面向对象_继承多态
+      面向对象/继承多态
     </h1>
   
 
@@ -87,7 +87,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python中可以使用class来创建一个类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P</span>:</span> <span class="comment"># 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):  </span></span><br><span class="line">    </span><br><span class="line">    place = <span class="string">'earth'</span> <span class="comment"># 类变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls)</span>:</span> <span class="comment"># __new__是一个内置的类函数,作用就是创建一个新的实例，创建是会自动调用，不需要使用@classmethod </span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, title)</span>:</span> <span class="comment"># __init__函数用于初始化P类的实例属性</span></span><br><span class="line">        self.title = title <span class="comment"># 实例变量只能由实例函数访问</span></span><br><span class="line">    <span class="comment"># self指针指向创建出来的实例，实例函数中第一个参数总是作为指针，通常写成self</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod # 类函数需要使用内置的类函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_1</span><span class="params">(cls)</span>:</span> <span class="comment"># 类的函数的第一个参数默认是指向类的指针，通常写成cls</span></span><br><span class="line">        print(cls.place) <span class="comment"># 类函数可以访问类的属性</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @staticmethod # 静态函数需要使用静态函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_2</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'Hello!'</span>) <span class="comment"># 静态函数不能访问类属性</span></span><br></pre></td></tr></table></figure>
+        <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python中可以使用class来创建一个类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">P</span>:</span> <span class="comment"># 直接创建的 P 是一个父类（parents）创建P的子类可以使用 class C(P):  </span></span><br><span class="line">    </span><br><span class="line">    place = <span class="string">'earth'</span> <span class="comment"># 类变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls)</span>:</span> <span class="comment"># __new__是一个内置的类函数,作用就是创建一个新的实例，创建是会自动调用，不需要使用@classmethod </span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, title)</span>:</span> <span class="comment"># __init__函数用于初始化P类的实例属性</span></span><br><span class="line">        self.title = title <span class="comment"># 实例变量只能由实例函数访问</span></span><br><span class="line">    <span class="comment"># self指针指向创建出来的实例，实例函数中第一个参数总是作为指针，通常写成self</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod # 类函数需要使用内置的类函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_1</span><span class="params">(cls)</span>:</span> <span class="comment"># 类的函数的第一个参数默认是指向类的指针，通常写成cls</span></span><br><span class="line">        print(cls.place) <span class="comment"># 类函数可以访问类的属性</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @staticmethod # 静态函数需要使用静态函数装饰器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_2</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'Hello!'</span>) <span class="comment"># 静态函数不能访问类属性</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>以上的 P类 包含有三类函数:</p>
 <ul>
@@ -192,7 +192,7 @@
       <ul>
         
           <li>
-            <a href="/2018/07/24/面向对象-继承多态/">面向对象_继承多态</a>
+            <a href="/2018/07/24/面向对象-继承多态/">面向对象/继承多态</a>
           </li>
         
           <li>
